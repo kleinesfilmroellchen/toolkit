@@ -25,9 +25,6 @@ services:
 
 networks:
   overleaf-redis:
-    enable_ipv6: true
   overleaf-mongo:
-    enable_ipv6: true
   overleaf-git-bridge:
-    enable_ipv6: true
 
