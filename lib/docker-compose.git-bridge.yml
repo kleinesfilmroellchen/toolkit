@@ -19,7 +19,9 @@ services:
             - ../config/variables.env
         user: root
         command: ["/server-pro-start.sh"]
+        networks:
+            - overleaf-git-bridge
 
     sharelatex:
-      links:
-        - git-bridge
+        networks:
+            - overleaf-git-bridge

@@ -10,10 +10,12 @@ services:
         command: ${REDIS_COMMAND}
         expose:
             - 6379
+        networks:
+            - overleaf-redis
 
     sharelatex:
       depends_on:
         redis:
           condition: service_started
-      links:
-        - redis
+      networks:
+        - overleaf-redis
